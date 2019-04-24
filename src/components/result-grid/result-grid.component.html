@@ -1,0 +1,24 @@
+<article class="table-responsive-vertical" label="search History">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th colspan="99">
+         <h1> Search History</h1>
+          <a class="clear" (click)="clearHistory()">Clear Search History</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of historyList">
+        <td data-title="Search">{{item.searchWord}}</td>
+        <td data-title="Date">{{item.date | date:'short'}}</td>
+        <td>
+          <a class="delete" (click)="deleteItemHistory(item.id)">
+            <img src="/assets/trash.png" alt="delete" />
+          </a>
+          <div class="clearfix"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</article>
