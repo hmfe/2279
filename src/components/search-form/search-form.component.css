@@ -1,0 +1,64 @@
+form .autocomplete {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+form .autocomplete input {
+  position: relative;
+  border: 1px solid #f1f1f1;
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+  border-radius: 45px;
+  background-image: url("/assets/search-icon.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position-x: 98%;
+  background-position-y: center;
+}
+
+form .autocomplete input:focus {
+  outline: none;
+  background: none;
+}
+
+form .autocomplete .autocomplete-items {
+  position: absolute;
+  border: 1px solid #f1f1f1;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 95%;
+  left: 21%;
+  right: 21%;
+}
+
+form .autocomplete .autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+form .autocomplete .autocomplete-items div:hover {
+  background-color: #B30000;
+  color: white;
+}
+
+form .autocomplete .autocomplete-items strong {
+  font-weight: 9000;
+  color: #B30000;
+  text-decoration: underline;
+}
+
+form .autocomplete .autocomplete-items div:hover strong {
+  background-color: #B30000;
+  color: white;
+}
+
+form label {
+  display: none;
+}

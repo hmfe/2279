@@ -1,0 +1,12 @@
+
+  
+  <app-search-form 
+    [autocompleteList]="autocompleteList$ | async" 
+    (selectedWord)="selectedWord($event)"
+    (searchedItem)="searchedItem($event)">
+  </app-search-form>
+  <app-result-grid 
+    [historyList]="historyList$ | async" 
+    (deleteItem)="deleteItem($event)" 
+    (clear)="clearHistory()">
+  </app-result-grid>

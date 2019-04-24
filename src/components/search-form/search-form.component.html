@@ -1,0 +1,15 @@
+<form autocomplete="off">
+  <div class="autocomplete">
+    <div class="input">
+      <label for="InputText"><h2>Search</h2></label>
+      <input title="search" type="search" id="InputText" name="InputText" placeholder="Search" [ngModel]="InputText"
+        (ngModelChange)="InputChanged($event)" />
+      <i class="search-icon"></i>
+    </div>
+    <div class="autocomplete-items">
+      <div (click)="selectedItem(item.word)" *ngFor="let item of autocompleteList | slice:0:9">
+        <strong>{{ item.word  | slice:0:InputText.length}}</strong>{{item.word | slice:InputText.length}}
+      </div>
+    </div>
+  </div>
+</form>
